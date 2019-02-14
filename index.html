@@ -15,8 +15,8 @@
 </head>
 <body>
 <h1 class="text-center">Yaml to Table</h1>
-<div ng-controller="MainController" class="container row">
-    <div class="col border-right">
+<div class="row container" ng-controller="MainController">
+    <div class="col-6 border-right">
         <h3>yaml</h3>
         <textarea rows="5" id="target1" class="form-control" ng-keyup="onkeyup1(e)"></textarea>
         <h3>DB</h3><br>
@@ -38,11 +38,11 @@
             </div>
         </div>
     </div>
-    <div class="col border-left">
+    <div class="col-6 border-left">
         <h3>yaml</h3>
         <textarea rows="5" id="target2" class="form-control" ng-keyup="onkeyup2(e)"></textarea>
         <h3>DB</h3><br>
-        <div ng-repeat="(key, records) in databases2">
+        <div ng-repeat="(key, records) in databases2" class="row">
             <h5>{{key}}</h5>
             <div class="table-responsive">
                 <table class="table text-nowrap table-sm text-sm-left table-bordered table-hover">
