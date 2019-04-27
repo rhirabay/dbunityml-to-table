@@ -14,49 +14,51 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
 </head>
 <body>
-<h1 class="text-center">Yaml to Table</h1>
-<div class="row" ng-controller="MainController">
-    <div class="col-6 border-right">
-        <h3>yaml</h3>
-        <textarea rows="5" id="target1" class="form-control" ng-keyup="onkeyup1(e)"></textarea>
-        <h3>DB</h3><br>
-        <div ng-repeat="(key, records) in databases1" class="row">
-            <h5>{{key}}</h5>
-            <div class="table-responsive">
-                <table class="table text-nowrap table-sm text-sm-left table-bordered table-hover">
-                    <thead class="bg-success">
-                    <tr>
-                        <th ng-repeat="(column, data) in records[0]">{{column}}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="record in records">
-                        <td ng-repeat="data in record">{{data}}</td>
-                    </tr>
-                    </tbody>
-                </table>
+<div class="container-fluid">
+    <h1 class="text-center">Yaml to Table</h1>
+    <div class="row" ng-controller="MainController">
+        <div class="col-6 border-right">
+            <h3>yaml</h3>
+            <textarea rows="5" id="target1" class="form-control" ng-keyup="onkeyup1(e)"></textarea>
+            <h3>DB</h3><br>
+            <div ng-repeat="(key, records) in databases1" class="row">
+                <h5>{{key}}</h5>
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-sm text-sm-left table-bordered table-hover">
+                        <thead class="bg-success">
+                        <tr>
+                            <th ng-repeat="(column, data) in records[0]">{{column}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="record in records">
+                            <td ng-repeat="data in record">{{data}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-6 border-left">
-        <h3>yaml</h3>
-        <textarea rows="5" id="target2" class="form-control" ng-keyup="onkeyup2(e)"></textarea>
-        <h3>DB</h3><br>
-        <div ng-repeat="(key, records) in databases2" class="row">
-            <h5>{{key}}</h5>
-            <div class="table-responsive">
-                <table class="table text-nowrap table-sm text-sm-left table-bordered table-hover">
-                    <thead class="bg-success">
-                    <tr>
-                        <th ng-repeat="(column, data) in records[0]">{{column}}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="record in records">
-                        <td ng-repeat="data in record">{{data}}</td>
-                    </tr>
-                    </tbody>
-                </table>
+        <div class="col-6 border-left">
+            <h3>yaml</h3>
+            <textarea rows="5" id="target2" class="form-control" ng-keyup="onkeyup2(e)"></textarea>
+            <h3>DB</h3><br>
+            <div ng-repeat="(key, records) in databases2" class="row">
+                <h5>{{key}}</h5>
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-sm text-sm-left table-bordered table-hover">
+                        <thead class="bg-success">
+                        <tr>
+                            <th ng-repeat="(column, data) in records[0]">{{column}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="record in records">
+                            <td ng-repeat="data in record">{{data}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
